@@ -1,0 +1,104 @@
+{
+  "workbench.activityBar.location": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "workbench.settings.editor": "json",
+  "breadcrumbs.symbolPath": "off",
+  "workbench.startupEditor": "newUntitledFile",
+  "symbols.hidesExplorerArrows": true,
+  "terminal.integrated.env.windows": {},
+  "excalidraw.theme": "dark",
+  "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "symbols",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "todohighlight.isCaseSensitive": false,
+  "code-runner.runInTerminal": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "editor.fontSize": 18,
+  "editor.minimap.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.addMissingImports": "explicit"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorWidth": 3,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "files.associations": {
+    ".env*": "dotenv"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": []
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.lineNumbers": "relative",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // Custom CSS
+  "apc.font.family": "Cascadia Code",
+  "apc.monospace.font.family": "Cascadia Code",
+  "apc.stylesheet": {
+    ".sidebar > .composite": "height: 12px !important",
+    ".title-label": "display: none !important",
+    ".title-actions": "display:none !important",
+    ".titlebar-center": "display: none !important",
+    ".titlebar-right": "display: none !important",
+    ".inline-tabs-placeholder": "display:none !important",
+  },
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 20
+  },
+  "apc.electron": {
+    "titleBarStyle": "hidden",
+  },
+  "vscode-neovim.compositeKeys": {
+    // insert mode to normal mode
+    "jj": {
+      "command": "vscode-neovim.escape"
+    },
+    // move single letter in insert mode
+    "kk": {
+      "command": "vscode-neovim.send",
+      "args": [
+        "<C-o>a"
+      ]
+    },
+    // move till the end in insert mode
+    "KK": {
+      "command": "vscode-neovim.send",
+      "args": [
+        "<C-o>A"
+      ]
+    },
+    // save file though auto-save is on. (just to go along with my current nvim script)
+    "jk": {
+      "command": "vscode-neovim.send",
+      "args": [
+        "<C-o>:w<cr>"
+      ]
+    }
+  },
+  "window.density.editorTabHeight": "compact",
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "lazyvim theme",
+  "window.zoomLevel": 0.2,
+}

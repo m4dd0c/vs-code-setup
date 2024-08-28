@@ -1,0 +1,32 @@
+# Extensions
+
+- Apc Customize UI++
+- Auto close tag
+- auto rename tag
+- c/cpp
+- c/cpp extension pack
+- cmake
+- cmake tools
+- c/cpp themes
+- code runner
+- colorize
+- es7+ react/redux/react snippet
+- eslint
+- excalidraw (unofficial)
+- import cost
+- google font
+- intellicode
+- github theme
+- intellicode api usage examples
+- lazyvim theme
+- live server
+- markdown all in one
+- material icon theme
+- path intellisense
+- prettier
+- pretty ts errors
+- symbols
+- tailwind css intellisense
+- vscode neovim
+- vscode-pdf
+- wsl
