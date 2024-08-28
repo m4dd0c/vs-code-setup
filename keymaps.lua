@@ -1,70 +1,59 @@
+-- leader key
+vim.g.mapleader = " "
 
--- Keymaps are auomatically loaded on the VeryLazy event
---Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- open file finder (telescope workaround)
+-- vim.keymap.set("n","<leader><leader>","<C-p>")
 
-local opts = { silent = false, noremap = true }
-local keymap = vim.keymap
+-- open config
+vim.cmd("nmap <leader>c :e ~/.config/nvim/init.lua<cr>")
 
--- saving on jk
-keymap.set("i", "jk", "<cmd>w<cr><ESC>", opts)
--- enter normal mode
-keymap.set("i", "jj", "<ESC>", opts)
-keymap.set("i", "JJ", "<ESC>", opts)
+-- save file  
+vim.cmd("imap <C-s> :w<cr>")
+-- save file
+vim.cmd('nmap <C-s> :w<cr>')
 
--- goto single char ahead in insertmode
-keymap.set("i", "kk", "<C-o>a", opts)
+-- split buffer
+vim.cmd("nmap ss :vsplit<cr>") 
+vim.cmd("nmap sv :split<cr>") 
 
--- goto end of line in insertmode
-keymap.set("i", "KK", "<C-o>A", opts)
+-- switch bw buffers
+vim.cmd("nmap H :tabp<cr>") 
+vim.cmd("nmap L :tabn<cr>") 
 
--- jumplist
-keymap.set("n", "<C-m>", "<C-o>", opts)
+-- move between splits
+vim.cmd('nmap sh <C-w>h')
+vim.cmd('nmap sl <C-w>l')
+vim.cmd('nmap sj <C-w>j')
+vim.cmd('nmap sk <C-w>k')
 
--- Restart LSP when backslash pressed twice
-keymap.set("n", "\\\\", "<cmd>LspRestart<cr>", opts)
+-- open previously opened buffers
+vim.cmd("nmap fd <C-T>")
+-- close buffer
+vim.cmd("nmap ff :q<cr>")
 
--- Swap the behavior of p and P
-keymap.set("n", "p", '"_dP', opts) -- Mimic P behavior
-keymap.set("n", "P", '"_dp', opts) -- Mimic p behavior
 
+-- paste without overwriting (no paste on insertLeave)
+vim.keymap.set('v', "p", "P")
+
+-- clear search highlightings
+vim.keymap.set("n", "<Esc>", ':nohlsearch<cr>')
+
+-- sync system Clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- turn on numbers
+vim.wo.number = true
+
+-- search ignore case
+vim.opt.ignorecase = true
+
+-- disble "ignorecase" option if the search pattern contains atleast one uppercase character
+vim.opt.smartcase = true
+
+
+
+-- ------------------------------------------ 
+-- not workings
+-- ------------------------------------------
 -- select all
-keymap.set("n", "<C-a>", "gg<S-v>G", opts)
-
--- split window
-keymap.set("n", "ss", ":vsplit<Return>", opts)
-
--- eslint enable and disable on demand
-local lspConfig = require("lspconfig")
-keymap.set("n", "<leader>se", [[<cmd>lua require('lspconfig').eslint.manager:start()<cr>]], opts)
-keymap.set("n", "<leader>te", [[<cmd>lua require('lspconfig').eslint.manager:stop()<cr>]], opts)
-
--- goto window
-keymap.set("n", "sh", "<C-w>h", opts)
-keymap.set("n", "sj", "<C-w>j", opts)
-keymap.set("n", "sk", "<C-w>k", opts)
-keymap.set("n", "sl", "<C-w>l", opts)
-
--- tabs
-keymap.set("n", "te", ":tabedit<Return>", opts)
-keymap.set("n", "td", ":tabclose<Return>", opts)
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<S-tab>", ":tabprev<Return>", opts)
-
--- buffer
-keymap.set("n", "ff", LazyVim.ui.bufremove, opts)
-keymap.set("n", "fd", "<cmd>b#<cr>", opts)
-
--- Diagnostics
--- see line diagnostic, since K used for hover, J makes sense
-keymap.set("n", "J", vim.diagnostic.open_float, opts)
-
--- goto diagnostic
-keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
-end, opts)
-
--- focus opened neotree
-keymap.set("n", "<leader>z", "<cmd>Neotree focus<cr>", opts)
--- change quotes to template literals quotes to grave
--- TODO:
+vim.cmd('nmap ;; gg<S-v>G')
