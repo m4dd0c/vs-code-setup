@@ -1,28 +1,62 @@
 -- leader key
 vim.g.mapleader = " "
 
--- open file finder (telescope workaround)
--- vim.keymap.set("n","<leader><leader>","<C-p>")
+-- Load packer.nvim if installed
+vim.cmd [[packadd packer.nvim]]
+
+-- Initialize plugins
+require('packer').startup(function(use)
+  -- Packer manages itself
+  use 'wbthomason/packer.nvim'
+
+  -- mini.surround plugin
+  -- turning it on, will make 'sh' worthless (I'll fix it when I have time)
+  -- use {
+  --   'echasnovski/mini.surround',
+  --   config = function()
+  --     require('mini.surround').setup()
+  --   end
+  -- }
+
+  -- flash.nvim plugin
+  use {
+    'folke/flash.nvim',
+    config = function()
+      require('flash').setup()
+    end
+  }
+end)
+
+-- jumplist
+vim.cmd("nmap <CR> m' <CR>")
+
+-- setting jump key from s -> c (s ain't working for some reason)
+vim.cmd("nmap c <cmd>lua require('flash').jump()<CR>")
+vim.cmd("xmap c <cmd>lua require('flash').jump()<CR>")
 
 -- open config
-vim.cmd("nmap <leader>c :e ~/.config/nvim/init.lua<cr>")
+vim.cmd("nmap <leader>c :e C:\\Users\\Manish Suthar\\AppData\\Local\\nvim\\init.lua<cr>")
 
--- save file  
-vim.cmd("imap <C-s> :w<cr>")
--- save file
-vim.cmd('nmap <C-s> :w<cr>')
+-- toggle filetree
+vim.cmd("nmap <leader>e :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>")
 
--- goto visual mode
-vim.cmd('nmap ;; <s-v>')
+-- find in files
+vim.cmd("nmap <leader>/ :call VSCodeNotify('workbench.action.findInFiles')<CR>")
+
+-- toggle goto file
+vim.cmd("nmap <leader><leader> :call VSCodeNotify('workbench.action.quickOpen')<CR>")
 
 -- select all
 vim.cmd("nmap <C-a> ggVG")
+
+-- save file
+vim.cmd('nmap <C-s> :w<cr>')
 
 -- split buffer
 vim.cmd("nmap ss :vsplit<cr>") 
 vim.cmd("nmap sv :split<cr>") 
 
--- switch b/w buffers
+-- switch bw buffers
 vim.cmd("nmap H :tabp<cr>") 
 vim.cmd("nmap L :tabn<cr>") 
 
@@ -36,7 +70,6 @@ vim.cmd('nmap sk <C-w>k')
 vim.cmd("nmap fd <C-T>")
 -- close buffer
 vim.cmd("nmap ff :q<cr>")
-
 
 -- paste without overwriting (no paste on insertLeave)
 vim.keymap.set('v', "p", "P")
