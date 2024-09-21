@@ -1,0 +1,197 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+shift+down",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "end",
+        "command": "editor.action.goToBottomHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "end",
+        "command": "-editor.action.goToBottomHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "end",
+        "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "end",
+        "command": "-cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "home",
+        "command": "cursorHome",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "home",
+        "command": "-cursorHome",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "-editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "code-runner.run"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-code-runner.run"
+    },
+    {
+        "key": "capslock+h",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "capslock+j",
+        "command": "cursorDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "capslock+k",
+        "command": "cursorUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "capslock+l",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "h",
+        "command": "-",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "j",
+        "command": "-",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "k",
+        "command": "-",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "l",
+        "command": "-",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "right",
+        "command": "cursorRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "right",
+        "command": "-cursorRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-vscode-neovim.send-cmdline",
+        "when": "neovim.init && neovim.mode == 'cmdline'"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-vscode-neovim.send-cmdline",
+        "when": "neovim.init && neovim.mode == 'cmdline'"
+    },
+    {
+        "key": "ctrl+oem_1",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+oem_2",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+oem_2",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+oem_3",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "f8",
+        "command": "-editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    }
+]
