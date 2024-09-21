@@ -12,11 +12,14 @@ vim.cmd("imap <C-s> :w<cr>")
 -- save file
 vim.cmd('nmap <C-s> :w<cr>')
 
+-- select all
+vim.cmd("nmap <C-a> ggVG")
+
 -- split buffer
 vim.cmd("nmap ss :vsplit<cr>") 
 vim.cmd("nmap sv :split<cr>") 
 
--- switch bw buffers
+-- switch b/w buffers
 vim.cmd("nmap H :tabp<cr>") 
 vim.cmd("nmap L :tabn<cr>") 
 
@@ -49,11 +52,3 @@ vim.opt.ignorecase = true
 
 -- disble "ignorecase" option if the search pattern contains atleast one uppercase character
 vim.opt.smartcase = true
-
-
-
--- ------------------------------------------ 
--- not workings
--- ------------------------------------------
--- select all
-vim.cmd('nmap ;; gg<S-v>G')
