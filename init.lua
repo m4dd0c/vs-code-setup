@@ -12,6 +12,9 @@ vim.cmd("imap <C-s> :w<cr>")
 -- save file
 vim.cmd('nmap <C-s> :w<cr>')
 
+-- goto visual mode
+vim.cmd('nmap ;; <s-v>')
+
 -- select all
 vim.cmd("nmap <C-a> ggVG")
 
