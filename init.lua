@@ -31,8 +31,8 @@ end)
 vim.cmd("nmap <CR> m' <CR>")
 
 -- setting jump key from s -> c (s ain't working for some reason)
-vim.cmd("nmap c <cmd>lua require('flash').jump()<CR>")
-vim.cmd("xmap c <cmd>lua require('flash').jump()<CR>")
+vim.cmd("nmap ; <cmd>lua require('flash').jump()<CR>")
+vim.cmd("xmap ; <cmd>lua require('flash').jump()<CR>")
 
 -- open config
 vim.cmd("nmap <leader>c :e C:\\Users\\Manish Suthar\\AppData\\Local\\nvim\\init.lua<cr>")
