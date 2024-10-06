@@ -35,7 +35,7 @@ vim.cmd("nmap ; <cmd>lua require('flash').jump()<CR>")
 vim.cmd("xmap ; <cmd>lua require('flash').jump()<CR>")
 
 -- open config
-vim.cmd("nmap <leader>c :e C:\\Users\\Manish Suthar\\AppData\\Local\\nvim\\init.lua<cr>")
+vim.cmd("nmap <leader>c :e D:\\vs-code-setup\\init.lua<cr>")
 
 -- toggle filetree
 vim.cmd("nmap <leader>e :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>")
