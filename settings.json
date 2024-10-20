@@ -93,7 +93,7 @@
     "jk": {
       "command": "vscode-neovim.send",
       "args": [
-        "<C-o>:w<cr>"
+        "<C-o>:w<cr><ESC>"
       ]
     }
   },
@@ -101,4 +101,29 @@
   "window.titleBarStyle": "custom",
   "workbench.colorTheme": "lazyvim theme",
   "window.zoomLevel": 0.2,
+  "update.mode": "manual",
+  "workbench.sideBar.location": "right",
+  "vscode-neovim.neovimInitVimPaths.win32": "D:\\vs-code-setup\\init.lua",
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+  "C_Cpp.clang_format_fallbackStyle": "Google",
 }

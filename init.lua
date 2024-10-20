@@ -39,9 +39,15 @@ vim.cmd("nmap <leader>c :e D:\\vs-code-setup\\init.lua<cr>")
 
 -- toggle filetree
 vim.cmd("nmap <leader>e :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>")
+ 
+-- collapse filetree
+vim.cmd("nmap z :call VSCodeNotify('list.collapseAll')<CR>")
 
 -- find in files
 vim.cmd("nmap <leader>/ :call VSCodeNotify('workbench.action.findInFiles')<CR>")
+
+-- run code 
+vim.cmd("nmap <leader>r :call VSCodeNotify('code-runner.run')<CR>")
 
 -- toggle goto file
 vim.cmd("nmap <leader><leader> :call VSCodeNotify('workbench.action.quickOpen')<CR>")
@@ -68,6 +74,7 @@ vim.cmd('nmap sk <C-w>k')
 
 -- open previously opened buffers
 vim.cmd("nmap fd <C-T>")
+
 -- close buffer
 vim.cmd("nmap ff :q<cr>")
 
