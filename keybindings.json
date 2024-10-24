@@ -1,6 +1,11 @@
 // Place your key bindings in this file to override the defaults
 [
   {
+    "key": "s h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sideBarFocus" // Only active when the file tree (side bar) is focused
+  },
+  {
     "key": "ctrl+shift+down",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
