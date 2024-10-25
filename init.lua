@@ -40,9 +40,6 @@ vim.cmd("nmap <leader>c :e D:\\vs-code-setup\\init.lua<cr>")
 -- toggle filetree
 vim.cmd("nmap <leader>e :call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>")
  
--- collapse filetree
-vim.cmd("nmap z :call VSCodeNotify('list.collapseAll')<CR>")
-
 -- find in files
 vim.cmd("nmap <leader>/ :call VSCodeNotify('workbench.action.findInFiles')<CR>")
 
