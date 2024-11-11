@@ -1,5 +1,3 @@
-# Profile.ps1 for PWSH
-
 # Aliases
 Set-Alias vim neovide
 Set-Alias less "C:\Program Files\git\usr\bin\less.exe"
@@ -32,7 +30,7 @@ Set-PSReadLineKeyHandler -Key RightArrow -Function forwardWord
 # Ctrl+z to go back single word (default).
 
 # Bind Alt+L to AcceptWholeSuggestion
-Set-PSReadLineKeyHandler -Chord Alt+l -Function AcceptSuggestion
+Set-PSReadLineKeyHandler -Chord CTRL+l -Function AcceptSuggestion
 
 
 
