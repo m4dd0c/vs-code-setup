@@ -11,9 +11,12 @@ function pconf {
 }
 
 function nconf {
-    nvim "C:\Users\Manish Suthar\AppData\Local\nvim"
+    nvim "C:\Users\Manish Suthar\AppData\Local\nvim\config\keymaps.lua"
 }
 
+function gconf {
+    nvim "C:\Users\Manish Suthar\.glzr\glazewm\config.yaml"
+}
 
 # laod prompt config
 function Get-ScriptDirectory { Split-Path $MyInvocation.ScriptName }
@@ -30,15 +33,10 @@ Set-PSReadLineKeyHandler -Key RightArrow -Function forwardWord
 # Ctrl+z to go back single word (default).
 
 # Bind Alt+L to AcceptWholeSuggestion
-Set-PSReadLineKeyHandler -Chord CTRL+l -Function AcceptSuggestion
-
-
+Set-PSReadLineKeyHandler -Chord ALT+";" -Function AcceptSuggestion
 
 # change default open location
 Set-Location "D:"
 
 # allow-dubious-git to fix: detected dubious ownership in repository.
 $env:GIT_ALLOW_DUBIOUS=1
-
-
-
