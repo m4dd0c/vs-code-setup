@@ -18,6 +18,7 @@ function gconf {
     nvim "C:\Users\Manish Suthar\.glzr\glazewm\config.yaml"
 }
 
+
 # laod prompt config
 function Get-ScriptDirectory { Split-Path $MyInvocation.ScriptName }
 $PROMPT_CONFIG = Join-Path (Get-ScriptDirectory) 'unicorn.omp.json'
@@ -34,6 +35,9 @@ Set-PSReadLineKeyHandler -Key RightArrow -Function forwardWord
 
 # Bind Alt+L to AcceptWholeSuggestion
 Set-PSReadLineKeyHandler -Chord ALT+";" -Function AcceptSuggestion
+
+# ClearScreen on ctrl+l
+Set-PSReadlineKeyHandler -Key 'Ctrl+l' -Function ClearScreen
 
 # change default open location
 Set-Location "D:"
